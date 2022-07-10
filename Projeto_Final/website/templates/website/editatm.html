@@ -1,0 +1,17 @@
+{% extends 'website/layout.html' %}
+
+{% block main %}
+
+<h3>TM</h3>
+    <form action="{% url 'website:editaTM' tm_id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <a href="{% url 'website:turing' %}" role="button" class="btn btn-warning">Cancelar</a>
+        <input type="submit" value="Gravar" class="btn btn-success" >
+        <a href="{% url 'website:apagaTM' tm_id %}" role="button" class="btn btn-danger">
+            Apagar
+        </a>
+    </form>
+
+{% endblock %}

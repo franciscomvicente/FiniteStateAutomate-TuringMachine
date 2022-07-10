@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    		<title>Teoria da Computação</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+	</head>
+	<body>
+	    <header class="jumbotron text-center text-white" style="background-image: url({% static '/website/images/header.png'%}">
+            <h1>Teoria da Computação</h1>
+            <nav class="btn-group" role="group" aria-label="Basic example" style="margin-top: 1.5rem">
+                <a href="{% url 'website:introducao' %}" type="button" class="btn btn-light">Introdução</a>
+                <a href="{% url 'website:afd' %}" type="button" class="btn btn-light">AFD</a>
+                <a href="{% url 'website:turing' %}" type="button" class="btn btn-light">Turing</a>
+            </nav>
+        </header>
+	    <article class="container" align="center">
+        <div class="row" margin="auto">
+		    <main style="margin:auto">
+	            {% block main %}
+	            {% endblock main %}
+            </main>
+        </div>
+	    </article>
+	    <!--<footer class="bg-light text-center text-lg-start fixed-bottom">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <a class="text-dark">© All Rights Reserved by Francisco Vicente</a>
+            </div>
+        </footer>-->
+	</body>
+</html>

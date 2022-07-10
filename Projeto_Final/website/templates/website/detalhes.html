@@ -1,0 +1,11 @@
+{% extends 'website/layout.html' %}
+
+{% block main %}
+    <p>Descrição: {{ detalhes.descricao }} </p>
+    <p>Alfabeto: {{ detalhes.alfabeto }}</p>
+    <p>Estados: {{ detalhes.estados }}</p>
+    <p>Estado Inicial: {{ detalhes.estadoinicial }}</p>
+    <p>Estados de Aceitação: {{ detalhes.estadosdeaceitacao }}</p>
+    <p>Tabela de Transições: {{ detalhes.tabeladetransicoes }}</p>
+    <a href="{% url 'website:afd' %}" role="button" class="btn btn-warning">Voltar</a>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'website/layout.html' %}
+
+{% block main %}
+    <h4>Como deseja criar um novo Autómato?</h4>
+    <div class="container">
+        <div class="text-center" style="margin-top: 2rem">
+            <a href="{% url 'website:json' %}" role="button" class="btn btn-dark" style="margin-right: 1rem">Upload Json</a>
+            <a href="{% url 'website:novo' %}" role="button" class="btn btn-dark">Formulário</a>
+        </div>
+
+        <div class="text-center" style="margin-top: 4rem">
+            <a href="{% url 'website:afd' %}" role="button" class="btn btn-warning">Voltar</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+digraph "Obtém o sucessor de um número binário" {
+	graph [rankdir=LR]
+	node [shape=circle]
+	edge [arrowhead=vee arrowsize=1]
+	Start [label="" shape=none]
+	B
+	C
+	E
+	A
+	D [shape=doublecircle]
+	Start -> A
+	A -> A [label="11R"]
+	A -> A [label="00R"]
+	A -> B [label="¬¬L"]
+	B -> C [label="01L"]
+	B -> E [label="10L"]
+	C -> C [label="11L"]
+	C -> C [label="00L"]
+	C -> D [label="¬¬R"]
+	E -> E [label="10L"]
+	E -> C [label="01L"]
+	E -> D [label="¬1S"]
+}

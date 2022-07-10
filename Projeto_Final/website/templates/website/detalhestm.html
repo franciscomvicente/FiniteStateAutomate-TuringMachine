@@ -1,0 +1,10 @@
+{% extends 'website/layout.html' %}
+
+{% block main %}
+    <p>Descrição: {{ detalhes.descricao }} </p>
+    <p>Estados: {{  detalhes.estados }} </p>
+    <p>Estado Inicial: {{ detalhes.estadoinicial }}</p>
+    <p>Estados de Aceitação: {{ detalhes.estadodeaceitacao }}</p>
+    <p>Tabela de Transições: {{ detalhes.tabeladetransicoes }}</p>
+    <a href="{% url 'website:turing' %}" role="button" class="btn btn-warning">Voltar</a>
+{% endblock %}

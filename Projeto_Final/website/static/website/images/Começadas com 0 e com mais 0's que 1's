@@ -1,0 +1,25 @@
+digraph "Começadas com 0 e com mais 0's que 1's" {
+	graph [rankdir=LR]
+	node [shape=circle]
+	edge [arrowhead=vee arrowsize=1]
+	Start [label="" shape=none]
+	C
+	D
+	B
+	A
+	E [shape=doublecircle]
+	Start -> A
+	A -> B [label="0XR"]
+	A -> A [label=XXR]
+	A -> E [label="11S"]
+	B -> B [label="00R"]
+	B -> B [label="11R"]
+	B -> B [label=XXR]
+	B -> C [label="¬¬L"]
+	C -> C [label=XXL]
+	C -> D [label="1XL"]
+	D -> D [label="00L"]
+	D -> D [label="11L"]
+	D -> D [label=XXL]
+	D -> A [label="¬¬R"]
+}

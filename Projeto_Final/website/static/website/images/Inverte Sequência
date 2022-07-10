@@ -1,0 +1,43 @@
+digraph "Inverte Sequência" {
+	graph [rankdir=LR]
+	node [shape=circle]
+	edge [arrowhead=vee arrowsize=1]
+	Start [label="" shape=none]
+	E
+	F
+	B
+	G
+	A
+	H
+	C
+	D
+	I [shape=doublecircle]
+	Start -> A
+	A -> A [label="00R"]
+	A -> A [label="11R"]
+	A -> B [label="¬#L"]
+	B -> C [label="1XR"]
+	B -> F [label="0XR"]
+	C -> C [label="##R"]
+	C -> C [label=XXR]
+	C -> C [label="11R"]
+	C -> C [label="00R"]
+	C -> D [label="¬1L"]
+	D -> D [label="11L"]
+	D -> D [label="00L"]
+	D -> E [label="##L"]
+	E -> E [label=XXL]
+	E -> H [label="¬¬R"]
+	E -> C [label="1XR"]
+	E -> F [label="0XR"]
+	F -> F [label="##R"]
+	F -> F [label=XXR]
+	F -> F [label="11R"]
+	F -> F [label="00R"]
+	F -> G [label="¬0L"]
+	G -> G [label="11L"]
+	G -> G [label="00L"]
+	G -> E [label="##L"]
+	H -> H [label="X¬R"]
+	H -> I [label="#¬R"]
+}

@@ -1,0 +1,44 @@
+{% extends 'website/layout.html' %}
+
+{% block main %}
+    <h2>Autómatos Finitos Determinísticos (AFD)</h2>
+    <a href="{% url 'website:option' %}" class="btn btn-dark btn-block" style="margin-bottom: 2rem; margin-top: 1rem">Novo AFD</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 border-bottom border-top">
+                <h5>Diagrama de Estados</h5>
+            </div>
+            <div class="col-sm-6 border-bottom border-top">
+                <h5>Descrição</h5>
+            </div>
+        </div>
+    </div>
+    {% for afd in afds %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 border-bottom">
+                    {% load static %} <img src="{% static "website/images/"|add:afd.descricao|add:".svg"%}" alt="home" style="max-width: 100%; max-height: 200px" />
+                </div>
+                <div class="col-sm-6 border-bottom" style="text-align: left; margin-top: 1rem">
+                    <span class="desc">
+                        {{ afd.descricao}}
+                    </span>
+                    <p style="margin-top: 0.8rem;">
+                        <a href="{% url 'website:detalhes' afd.id %}" class="btn btn-info  btn-sm" style="margin-right: 0.2rem;">
+                            Detalhes
+                        </a>
+                        <a href="{% url 'website:sequencia' afd.id %}" class="btn btn-success  btn-sm" style="margin-right: 0.2rem;">
+                            Validar Sequência
+                        </a>
+                        <a href="{% url 'website:edita' afd.id %}" class="btn btn-warning  btn-sm" style="margin-right: 0.2rem;">
+                            Editar AFD
+                        </a>
+                        <a href="{% url 'website:apaga' afd.id %}" class="btn btn-danger  btn-sm" style="margin-right: 0.2rem;">
+                            Apagar AFD
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+   {% endfor %}
+{% endblock %}

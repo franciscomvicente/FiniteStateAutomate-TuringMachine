@@ -1,0 +1,15 @@
+{% extends 'website/layout.html' %}
+
+{% block main %}
+    <form action="" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Validar" class="btn btn-dark">
+        <a href="{% url 'website:turing' %}" role="button" class="btn btn-warning">Voltar</a>
+    </form>
+
+    {% if resultado != None %}
+        <p style="margin-top: 1rem">{{ resultado }}</p>
+    {% endif %}
+
+{% endblock %}

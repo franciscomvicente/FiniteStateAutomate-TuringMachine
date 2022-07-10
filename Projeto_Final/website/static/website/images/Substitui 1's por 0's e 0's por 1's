@@ -1,0 +1,16 @@
+digraph "Substitui 1's por 0's e 0's por 1's" {
+	graph [rankdir=LR]
+	node [shape=circle]
+	edge [arrowhead=vee arrowsize=1]
+	Start [label="" shape=none]
+	B
+	A
+	C [shape=doublecircle]
+	Start -> A
+	A -> A [label="10R"]
+	A -> A [label="01R"]
+	A -> B [label="¬¬L"]
+	B -> B [label="00L"]
+	B -> B [label="11L"]
+	B -> C [label="¬¬R"]
+}
